@@ -28,7 +28,20 @@ data = {
     "text": TEXT
 }
 
+response = requests.post(url, data=data)import requests
+
+TOKEN = "7787584418:AAFnL7cLdaw4NgyKdmJOqMvd7GRGL8zgks8"
+CHAT_ID = "6393521721"
+TEXT = "تست که مطمئن بشیم پیام درسته"
+
+url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
+data = {
+    "chat_id": CHAT_ID,
+    "text": TEXT
+}
+
 response = requests.post(url, data=data)
+print(response.text)
 print(response.text)
 ## خروجی ربات:
 - نقطه ورود
