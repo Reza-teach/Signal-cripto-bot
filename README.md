@@ -83,3 +83,24 @@ data = {
 
 answer = requests.post(url, data=data)
 print(answer.text)
+import requests
+
+# اطلاعات ربات
+TOKEN = "7787584418:AAFnL7cLdaw4NgyKdmJOqMvd7GRGL8zgks8"
+CHAT_ID = "6393521721"
+TEXT = "تست کنیم ببینیم پیام درسته یا نه"
+
+# آدرس API تلگرام
+url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
+
+# داده‌ها
+data = {
+    "chat_id": CHAT_ID,
+    "text": TEXT
+}
+
+# ارسال پیام
+answer = requests.post(url, data=data)
+
+# چاپ پاسخ دریافتی
+print(answer.text)
