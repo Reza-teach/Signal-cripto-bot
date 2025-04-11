@@ -55,3 +55,17 @@ print(response.text)
 
 **توسعه‌دهنده:** رضا  
 **نام کاربری تلگرام:** @Fzrtsh
+import requests
+
+TOKEN = "7787584418:AAFnL7cLdaw4NgyKdmJOqMvd7GRGL8zgks8"
+CHAT_ID = "6393521721"
+TEXT = "تست کنیم ببینیم پیام درسته یا نه"
+
+url = f"https://api.telegram.org/bot{TOKEN}/sendMessage"
+data = {
+    "chat_id": CHAT_ID,
+    "text": TEXT
+}
+
+response = requests.post(url, data=data)
+print(response.text)
